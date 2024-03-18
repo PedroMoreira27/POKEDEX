@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react';
+import api from './data/services/api';
+import Card from './ui/components/card';
+
+export default function App() {
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    async function getAllPokemons() {
+      try {
+        const response = await api.get('?limit=1000');
+        const { results } = response.data;
+
+        const pokemonData = await Promise.all(
+          results.map(async (pokemon) => {
+            const pokemonResponse = await api.get(pokemon.url);
+            return pokemonResponse.data;
+          }),
+        );
+
+        setPokemons(pokemonData);
+      } catch (error) {
+        console.error('Erro ao obter dados dos Pokémon:', error);
+      }
+    }
+
+    getAllPokemons();
+  }, []);
+
+  return (
+    <div className="App">
+      <div style={{ display: 'flex',gap: '10px', flexWrap: 'wrap'}}>
+        {pokemons.map((pokemon, index) => (
+          <Card
+            key={index}
+            name={pokemon.name}
+            image={pokemon.sprites?.front_default}
+            description={
+              pokemon.species.flavor_text_entries
+                ? pokemon.species.flavor_text_entries[6].flavor_text
+                : 'Sem Descrição'
+            }
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
