@@ -1,23 +1,29 @@
 import React from 'react';
 import '../styles/card.css';
-import ReactDOM from 'react-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons';
+// import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
-const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />;
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons';
 
-ReactDOM.render(element, document.body);
+// const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />;
 
-function Card({ name, image, description }) {
+// ReactDOM.render(element, document.body);
+
+function Card({ name, image }) {
   return (
-    <div className="card">
-      <div className="card-details">
-        <div className="card-image">
-          <img src={image} alt={name} />
-        </div>{' '}
-        <p className="text-title">{name}</p>
-      </div>
-      <button className="card-button"><FontAwesomeIcon icon="fas fa-info-circle" />info</button>
+    <div className="card" style={{ margin: '3%' }}>
+      <a href={`/pokemon/${name}`}>
+        <div className="card-details">
+          <div className="card-image">
+            <img src={image} alt={name} />
+          </div>
+          <p className="text-title">{name}</p>
+        </div>
+      </a>
+      <Link to={`/pokemon/${name}`} className="card-button">
+        DETALHES
+      </Link>
     </div>
   );
 }

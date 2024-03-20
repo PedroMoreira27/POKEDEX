@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <div style={{ display: 'flex',gap: '10px', flexWrap: 'wrap'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between',gap: 'auto', flexWrap: 'wrap'}}>
         {pokemons.map((pokemon, index) => (
           <Card
             key={index}
