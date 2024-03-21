@@ -1,10 +1,10 @@
+import { createRoot } from 'react-dom/client'; // Update import statement
+import Pokemon from './ui/components/Pokemon';
 import React from 'react';
-import pokemon from './ui/components/Pokemon';
 
-
-const pokemon = ReactDOM.createRoot(document.getElementById('pokemon'));
-pokemon.render(
+const root = createRoot(document.getElementById('pokemon')); // Use createRoot from react-dom/client
+root.render(
   <React.StrictMode>
     <Pokemon />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
