@@ -1,90 +1,89 @@
 /* Normal Type */
 .normal {
-  background-color: #A8A878;
+  background: linear-gradient(134deg, #A8A878 49%, #6D6D4E 50%);
 }
  
 /* Fighting Type */
 .fighting {
-  background-color: #C03028;
+  background: linear-gradient(134deg, #C03028 49%, #7D1F1A 50%);
 }
  
 /* Flying Type */
 .flying {
-  background-color: #A890F0;
+  background: linear-gradient(134deg, #A890F0 49%, #5665B8 50%);
 }
  
 /* Poison Type */
 .poison {
-  background-color: #A040A0;
+  background: linear-gradient(134deg, #A040A0 49%, #6E3A74 50%);
 }
  
 /* Ground Type */
 .ground {
-  background-color: #E0C068;
+  background: linear-gradient(134deg, #E0C068 49%, #92803A 50%);
 }
  
 /* Rock Type */
 .rock {
-  background-color: #B8A038;
+  background: linear-gradient(134deg, #B8A038 49%, #7A713A 50%);
 }
  
 /* Bug Type */
 .bug {
-  background-color: #A8B820;
+  background: linear-gradient(134deg, #A8B820 49%, #6E7728 50%);
 }
  
 /* Ghost Type */
 .ghost {
-  background-color: #705898;
+  background: linear-gradient(134deg, #705898 49%, #4A3A4A 50%);
 }
  
 /* Steel Type */
 .steel {
-  background-color: #B8B8D0;
+  background: linear-gradient(134deg, #B8B8D0 49%, #7A7A9A 50%);
 }
  
 /* Fire Type */
 .fire {
-  background-color: #F08030;
+  background: linear-gradient(134deg, #F08030 49%, #A85325 50%);
 }
  
 /* Water Type */
 .water {
-  background-color: #6890F0;
+  background: linear-gradient(134deg, #6890F0 49%, #3A6E9A 50%);
 }
  
 /* Grass Type */
 .grass {
-  background-color: #78C850;
+  background: linear-gradient(134deg, #78C850 49%, #4A864A 50%);
 }
  
 /* Electric Type */
 .electric {
-  background-color: #F8D030;
+  background: linear-gradient(134deg, #F8D030 49%, #A89A25 50%);
 }
  
 /* Psychic Type */
 .psychic {
-  background-color: #F85888;
+  background: linear-gradient(134deg, #F85888 49%, #A73A6E 50%);
 }
  
 /* Ice Type */
 .ice {
-  background-color: #98D8D8;
+  background: linear-gradient(134deg, #98D8D8 49%, #6E9AA8 50%);
 }
  
 /* Dragon Type */
 .dragon {
-  background-color: #7038F8;
+  background: linear-gradient(134deg, #7038F8 49%, #47307A 50%);
 }
  
 /* Dark Type */
 .dark {
-  background-color: #705848;
+  background: linear-gradient(134deg, #705848 49%, #4A3A30 50%);
 }
  
 /* Fairy Type */
 .fairy {
-  background-color: #EE99AC;
+  background: linear-gradient(134deg, #EE99AC 49%, #B06E88 50%);
 }
- 

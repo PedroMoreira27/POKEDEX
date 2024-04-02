@@ -1,10 +1,14 @@
-@font-face {
+/* @font-face {
   font-family: 'pokemon';
   src: url('pokedex\assets\fonts\pokemon_pixel_font.ttf') format('truetype');
 }
 
 *{	
   font-family: 'pokemon';
+} */
+
+body{
+  background-color: #323232;
 }
 
 .card-pkm{
@@ -17,12 +21,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
 .card-pkm img{
-  width: 100px;
-  height: 100px;
+  width: 20vw;
+  height: 20vh;
 }
 
 .card-pkm:hover{

@@ -1,0 +1,30 @@
+
+.Navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #323232;
+  margin-bottom: 1vh;
+  background-color: #434343;
+}
+.logo {
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,0,0,1) 47%, rgba(2,0,23,1) 47%, rgba(1,0,9,1) 48%, rgba(0,0,0,1) 55%, rgba(255,255,255,1) 55%);
+  height: 10vh;
+  width: 10vw;
+  margin: 0;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokeball-center{
+  background-color: #fff;
+  height: 2vh;
+  width: 2vh;
+  border: #000 1vw solid;
+  border-radius: 50%;
+  margin: 0;
+}
