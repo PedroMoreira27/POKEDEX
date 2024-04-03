@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import api from '../../services/api';
+import Navbar from '../../components/navbar';
 import '../../styles/Home.css';
 import '../../styles/Types.css';
 
