@@ -1,31 +1,52 @@
-body{
-  margin: 0;
-  padding: 0;
-  background-color: #323232;
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
+body{
+  margin: 1%;
+  padding: 0%;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-.card-pkm{
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.namePokemon{
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  rotate: 90deg;
+}
+
+/* Cartão de Pokémon */
+.card-pkm {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  width: 30vw;
-  height: 30vh;
-  margin: 10px;
+  width: 90%;
+  max-width: 5vw;
+  margin: 10px auto;
+  height: 33vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
-.card-pkm img{
-  width: 100px;
-  height: 100px;
-}
-
-.card-pkm:hover{
+.card-pkm:hover {
   transform: scale(1.1);
 }
+
+/* Overlay de carregamento */
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -33,11 +54,12 @@ body{
   width: 100vw;
   height: 100vh;
   display: flex;
+  margin-top: 45vh;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 4vw; /* Ajustado para responsivo */
   z-index: 999;
-  color: white; /* Definindo a cor do texto como branco */
+  color: white;
 }
 
 .loading-overlay,
@@ -48,19 +70,18 @@ body{
 .loading-overlay {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin-top: 22%;
+  width: 10vw; /* Ajustado para responsivo */
+  height: 10vw; /* Ajustado para responsivo */
 }
 
 .loading-overlay div {
   box-sizing: border-box;
   display: block;
   position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid currentColor;
+  width: 8vw; /* Ajustado para responsivo */
+  height: 8vw; /* Ajustado para responsivo */
+  margin: 1vw; /* Ajustado para responsivo */
+  border: 1vw solid currentColor; /* Ajustado para responsivo */
   border-radius: 50%;
   animation: loading-overlay 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: currentColor transparent transparent transparent;
@@ -86,5 +107,3 @@ body{
     transform: rotate(360deg);
   }
 }
-
-

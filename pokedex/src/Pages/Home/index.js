@@ -30,6 +30,7 @@ export default function Home() {
   }, []);
 
   return (
+
     <div style={{ position: 'relative' }}>
       {loading && (
         <div className="loading-overlay">
@@ -58,7 +59,7 @@ export default function Home() {
           >
             <div>
               <img src={pokemon.sprites.front_default} alt="Pokemon Sprite" />
-              <p>{pokemon.name}</p>
+              <p className='namePokemon'>{pokemon.name.toUpperCase()}</p>
             </div>
           </Link>
         ))}
