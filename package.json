@@ -40,11 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
-  },
+
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
