@@ -29,17 +29,19 @@ export default function Pokemons() {
 
   return (
     <div className="pokemon-details">
-      <h2>{pokemon.name}</h2>
+      <h2 className="pokemon-name">{pokemon.name.toUpperCase()}</h2>
       <img src={pokemon.sprites.front_default} alt="Pokemon Sprite" />
       <p>
         Type:
-          {pokemon.types.map((type, index) => (
-            <span className={`${type.type.name}`} 
-            style={{padding: "5px", margin: "5px", borderRadius: "5px"}}
-            key={type.type.name}>
-              {type.type.name} 
-            </span>
-          ))}
+        {pokemon.types.map((type, index) => (
+          <span
+            className={`${type.type.name}`}
+            style={{ padding: '5px', margin: '5px', borderRadius: '5px' }}
+            key={type.type.name}
+          >
+            {type.type.name}
+          </span>
+        ))}
       </p>
       <p>Height: {pokemon.height}</p>
       <p>Weight: {pokemon.weight}</p>
@@ -47,7 +49,9 @@ export default function Pokemons() {
         Abilities:{' '}
         {pokemon.abilities.map((ability) => ability.ability.name).join(', ')}
       </p>
-      <Link to="/" className="back-button">Voltar</Link>
+      <Link to="/" className="back-button">
+        Voltar
+      </Link>
     </div>
   );
 }

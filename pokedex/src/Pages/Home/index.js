@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
-import Navbar from '../../components/navbar';
 import '../../styles/Home.css';
 import '../../styles/Types.css';
 
 export default function Home() {
   const [pokemonList, setPokemonList] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado de loading adicionado
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -20,9 +20,8 @@ export default function Home() {
             return pokemonResponse.data;
           }),
         );
-        console.log(pokemons);
         setPokemonList(pokemons);
-        setLoading(false); // Altera o estado de loading para false quando o carregamento estiver concluído
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching Pokémon:', error);
       }
@@ -30,8 +29,11 @@ export default function Home() {
     fetchPokemon();
   }, []);
 
-  return (
+  const filteredPokemonList = pokemonList.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
+  return (
     <div style={{ position: 'relative' }}>
       {loading && (
         <div className="loading-overlay">
@@ -40,19 +42,27 @@ export default function Home() {
           <div></div>
           <div></div>
         </div>
-      )}{' '}
-      {/* Renderiza o loading quando loading for true */}
+      )}
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <input
+          style={{ display: loading ? 'none' : 'block', width: '40%', height: '5vh', borderRadius: '8px', border: 'none', padding: '0 10px', boxShadow: 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset' }}
+          type="text"
+          placeholder="Digite o Nome do Pokemon"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
       <div
         style={{
           display: 'flex',
           justifyContent: 'space-around',
           flexDirection: 'row',
           flexWrap: 'wrap',
-          opacity: loading ? 0.5 : 1, // Reduz a opacidade do conteúdo enquanto loading for true
-          pointerEvents: loading ? 'none' : 'auto', // Desabilita cliques enquanto loading for true
+          opacity: loading ? 0.5 : 1,
+          pointerEvents: loading ? 'none' : 'auto',
         }}
       >
-        {pokemonList.map((pokemon, index) => (
+        {filteredPokemonList.map((pokemon, index) => (
           <Link
             key={index}
             to={`/pokemons/${pokemon.name}`}
