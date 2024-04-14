@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/POKEDEX/static/css/main.71f0334f.css",
-    "main.js": "/POKEDEX/static/js/main.993047cc.js",
-    "index.html": "/POKEDEX/index.html",
-    "main.71f0334f.css.map": "/POKEDEX/static/css/main.71f0334f.css.map",
-    "main.993047cc.js.map": "/POKEDEX/static/js/main.993047cc.js.map"
+    "main.css": "/POKEDEX/podedex/static/css/main.71f0334f.css",
+    "main.js": "/POKEDEX/podedex/static/js/main.993047cc.js",
+    "index.html": "/POKEDEX/podedex/index.html",
+    "main.71f0334f.css.map": "/POKEDEX/podedex/static/css/main.71f0334f.css.map",
+    "main.993047cc.js.map": "/POKEDEX/podedex/static/js/main.993047cc.js.map"
   },
   "entrypoints": [
     "static/css/main.71f0334f.css",
