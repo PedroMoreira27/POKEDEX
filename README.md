@@ -1,6 +1,3 @@
-
-Claro, aqui está uma versão atualizada do README com as instruções para o uso do Axios e React no projeto Pokédex:
-
 Projeto Pokédex
 Descrição
 Este projeto é uma aplicação simples que utiliza a PokeAPI, uma API pública gratuita que fornece informações sobre Pokémon. A aplicação permite aos usuários pesquisar e visualizar dados sobre diferentes Pokémon, como seus tipos, habilidades, estatísticas e muito mais.
