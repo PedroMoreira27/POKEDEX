@@ -3,5 +3,5 @@ import React from 'react';
 
 export default defineConfig({
   plugins: [React()],
-  base: '/POKEDEX',
+  base: '/POKEDEX/pokedex',
 });
